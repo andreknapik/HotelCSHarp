@@ -24,3 +24,16 @@ var recepcionista = new Recepcionista()
 recepcionista.SeApresentar();
 recepcionista.AtenderTelefone();
 recepcionista.FalarIngles();
+
+var gerente = new Gerente()
+{
+    Nome ="André Xrep",
+    CPF =  "02345678954",
+    Telefone = "21-977886699",
+};
+
+gerente.SeApresentar();
+gerente.ArrumarACama();
+gerente.LimparOQuarto();
+gerente.AtenderTelefone();
+gerente.FalarIngles();
