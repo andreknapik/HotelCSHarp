@@ -1,0 +1,15 @@
+/home/andre/CSharp/HotelCSharp/bin/Debug/net6.0/HotelCSharp
+/home/andre/CSharp/HotelCSharp/bin/Debug/net6.0/HotelCSharp.deps.json
+/home/andre/CSharp/HotelCSharp/bin/Debug/net6.0/HotelCSharp.runtimeconfig.json
+/home/andre/CSharp/HotelCSharp/bin/Debug/net6.0/HotelCSharp.dll
+/home/andre/CSharp/HotelCSharp/bin/Debug/net6.0/HotelCSharp.pdb
+/home/andre/CSharp/HotelCSharp/obj/Debug/net6.0/HotelCSharp.csproj.AssemblyReference.cache
+/home/andre/CSharp/HotelCSharp/obj/Debug/net6.0/HotelCSharp.GeneratedMSBuildEditorConfig.editorconfig
+/home/andre/CSharp/HotelCSharp/obj/Debug/net6.0/HotelCSharp.AssemblyInfoInputs.cache
+/home/andre/CSharp/HotelCSharp/obj/Debug/net6.0/HotelCSharp.AssemblyInfo.cs
+/home/andre/CSharp/HotelCSharp/obj/Debug/net6.0/HotelCSharp.csproj.CoreCompileInputs.cache
+/home/andre/CSharp/HotelCSharp/obj/Debug/net6.0/HotelCSharp.dll
+/home/andre/CSharp/HotelCSharp/obj/Debug/net6.0/refint/HotelCSharp.dll
+/home/andre/CSharp/HotelCSharp/obj/Debug/net6.0/HotelCSharp.pdb
+/home/andre/CSharp/HotelCSharp/obj/Debug/net6.0/HotelCSharp.genruntimeconfig.cache
+/home/andre/CSharp/HotelCSharp/obj/Debug/net6.0/ref/HotelCSharp.dll
