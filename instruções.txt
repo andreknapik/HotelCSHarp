@@ -7,6 +7,9 @@ Você foi contratado para criar um sistema simples de hotelaria, para isso é ne
 
 
 * Todo Gerente tem que saber tudo que uma camareira faz e tudo o que uma recepcionista faz. OK
-* Deve ter uma Entidade Hotel.
-* Deve ser possível Promover tanto uma Recepcionista quanto uma Camareira para o cargo de Gerente.
-*
+* Deve ter uma Entidade Hotel. OK
+
+* Criar um Serviço de RH Terceirizado OK
+* O serviço terceirizado deve saber contratar Cmareiras, Recepcionistas e Promover Gerentes. - OK
+
+* Deve ser possível Promover tanto uma Recepcionista quanto uma Camareira para o cargo de Gerente. OK
