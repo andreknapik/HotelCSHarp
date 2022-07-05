@@ -1,4 +1,5 @@
 ﻿
+using HotelCSharp.Exceptions;
 using HotelCSharp.Interfaces;
 using HotelCSharp.Models;
 
@@ -115,7 +116,18 @@ rh.ContratarRecepcionista(recepcionista3);
 var CamareiraASerPromovida = new Camareira{
     Nome = "Eugenia Lima"
 };
-rh.PromverParaGerente(CamareiraASerPromovida);
+
+try
+{
+    rh.PromverParaGerente(CamareiraASerPromovida);
+
+}
+catch ( Exception ex)
+{
+    System.Console.WriteLine(ex.Message);
+}
+
+
 
 // Promova uma Recepcionista
 
@@ -123,6 +135,24 @@ var RecepcionistaASerPromovida = new Recepcionista{
     Nome = "Amanda Vasconcelos",
     CPF = "012365678945"
 };
+
+try
+{
+    rh.PromverParaGerente(RecepcionistaASerPromovida);
+
+}
+catch ( DocumentosInvalidosException ex)
+{
+    // Tomar ação porque eu sei que foi erro de documento.
+    Console.WriteLine(ex.Message);
+}
+catch (Exception ex)
+{
+    //Se cair aqui é porque deu ruim no nosso sistema.
+    Console.WriteLine(ex.Message);
+}
+
+
 rh.PromverParaGerente(RecepcionistaASerPromovida);
 
 
