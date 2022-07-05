@@ -5,10 +5,8 @@ using System.Threading.Tasks;
 
 namespace HotelCSharp.Interfaces
 {
-    public interface ICamareira : IPessoa
+    public interface IPessoa
     {
-        void ArrumarACama();
-        void LimparOQuarto();
-        
+        void SeApresentar();
     }
 }

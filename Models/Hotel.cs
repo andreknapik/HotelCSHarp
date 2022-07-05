@@ -10,10 +10,38 @@ namespace HotelCSharp.Models
     {
         public string Nome {get;set;}
         public Endereco Endereco {get;set;}
-        public List<Recepcionista> Recepcionistas {get;set;}
+        public List<IRecepcionista> Recepcionistas {get; private set;}
 
-        public List<Camareira> Camareiras {get;set;}
-        public IGerente Gerente {get;set;}
+        public List<ICamareira> Camareiras {get;private set;}
+        public IGerente Gerente {get; private set;}
+
+        public Hotel(string nome)
+        {
+            Nome = nome;
+            Recepcionistas = new List<IRecepcionista>();
+            Camareiras = new List<ICamareira>();
+        }
+        public Hotel(string nome, Endereco endereco)
+        {   
+            Nome = nome;
+            Endereco = endereco;
+            Recepcionistas = new List<IRecepcionista>();
+            Camareiras = new List<ICamareira>();
+        }
+
+        public void ContratarGerente(IGerente gerente)
+        {
+            // Aqui aconteceria  a entrevista
+            Gerente = gerente;
+        }
+        public void ContratarCamareira(ICamareira camareira)
+        {
+            Camareiras.Add(camareira);
+        }
+        public void ContratarRecepcionista(IRecepcionista recepcionista)
+        {
+            Recepcionistas.Add(recepcionista);
+        }
         
     }
 }

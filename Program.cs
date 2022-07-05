@@ -1,4 +1,5 @@
 ﻿
+using HotelCSharp.Interfaces;
 using HotelCSharp.Models;
 
 Console.WriteLine("*******************************************");
@@ -8,32 +9,87 @@ Console.WriteLine();
 
 // Contratar uma camareira.
 
-var camareira = new Camareira("Joana Prado", "12345678902","21-977886655");
-camareira.SeApresentar();
-camareira.ArrumarACama();
-camareira.LimparOQuarto();
+ICamareira camareira1 = new Camareira("Joana Prado", "12345678902","21-977886655");
+ICamareira camareira2 = new Camareira("Maria Prado", "12345678902","21-977886656");
 
 
-var recepcionista = new Recepcionista()
+IRecepcionista recepcionista1 = new Recepcionista()
 {
     Nome ="Mariana Prado",
     CPF =  "02345678901",
     Telefone = "21-977886677",
 };
 
-recepcionista.SeApresentar();
-recepcionista.AtenderTelefone();
-recepcionista.FalarIngles();
+IRecepcionista recepcionista2 = new Recepcionista()
+{
+    Nome ="Jessica Albuquerque",
+    CPF =  "02345678901",
+    Telefone = "21-977886687",
+};
 
-var gerente = new Gerente()
+
+// Administrou 10 hotéis e é o cara da gerência. Trabalhando atualmente.
+IGerente gerente1 = new Gerente()
 {
     Nome ="André Xrep",
     CPF =  "02345678954",
     Telefone = "21-977886699",
 };
 
-gerente.SeApresentar();
-gerente.ArrumarACama();
-gerente.LimparOQuarto();
-gerente.AtenderTelefone();
-gerente.FalarIngles();
+// Administrou 2 hotéis e está desempregado.
+IGerente gerente2 = new Gerente()
+{
+    Nome ="Ciclano de Tal",
+    CPF =  "02345678954",
+    Telefone = "21-977886799",
+};
+
+// Inaugurando o Hotel
+
+Hotel hotel = new Hotel("Hotel Csharp", new Endereco()
+{
+    CEP = "25985630", 
+    Rua = "Rua  XYZ",
+    Numero = 58,
+    Complemento = "Esquina 3",
+    Bairro = "Lugar Nenhum",
+    Cidade = "Qualquer Lugar",
+});
+
+// Contratando 2 Camareiras
+hotel.ContratarCamareira(camareira1);
+hotel.ContratarCamareira(camareira2);
+
+// Contratando 2 Recepcionistas
+hotel.ContratarRecepcionista(recepcionista1);
+hotel.ContratarRecepcionista(recepcionista2);
+
+// Contratando o gerente;
+hotel.ContratarGerente(gerente1);
+
+// Contratar o Faz Tudo.
+hotel.ContratarCamareira(gerente2);
+hotel.ContratarRecepcionista(gerente2);
+
+// Gerente. 
+hotel.Gerente.SeApresentar();
+hotel.Gerente.ArrumarACama();
+hotel.Gerente.LimparOQuarto();
+hotel.Gerente.AtenderTelefone();
+hotel.Gerente.FalarIngles();
+
+foreach (var camareira in hotel.Camareiras)
+{
+    camareira.SeApresentar();
+    camareira.ArrumarACama();
+    camareira.LimparOQuarto();
+}
+
+foreach (var recepcionista in hotel.Recepcionistas)
+{
+    recepcionista.SeApresentar();
+    recepcionista.AtenderTelefone();
+    recepcionista.FalarIngles();
+}
+
+System.Console.WriteLine();
